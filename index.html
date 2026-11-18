@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Рисанкин Книжный Клуб</title>
 <style>
 :root{
@@ -831,105 +832,123 @@ display:grid;grid-template-columns:.75fr 1fr;gap:40px;box-shadow:10px 12px 0 #00
  #now .dick{width:37%!important;right:2%!important;top:330px!important;}
  #now .von-caption{width:115%!important;}
 }
+
+/* November 2026 — voting announcement and updated club bookshelf */
+.voting-announcement{display:flex;align-items:center;gap:26px;background:#d8bd65;border:1px solid #171713;box-shadow:6px 6px 0 #171713;margin:28px 0 32px;padding:26px 30px;position:relative;transform:rotate(-.3deg)}
+.announcement-star{font:60px/1 Georgia,serif;color:#a33e32;flex:0 0 auto;transform:rotate(12deg)}
+.announcement-copy{flex:1;min-width:0}.announcement-label{font:11px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em}
+.announcement-title{font:400 clamp(29px,4.2vw,55px)/.98 'Arial Narrow',Impact,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:9px 0}
+.announcement-title em{font-family:Georgia,serif;font-size:.7em;font-weight:normal;text-transform:none;letter-spacing:-.045em;color:#9d3227}
+.announcement-copy p{font:16px/1.4 Georgia,serif;max-width:570px;margin:12px 0 0}
+.announcement-button{display:inline-block;background:#171713;color:#fff4da;padding:16px 20px;white-space:nowrap;text-transform:uppercase;letter-spacing:.07em;font:12px Arial,sans-serif;text-decoration:none;border:1px solid #171713;transition:transform .2s}
+.announcement-button:hover{transform:translateY(-3px)}
+@media(max-width:700px){.voting-announcement{display:block;padding:22px 18px}.announcement-star{position:absolute;top:14px;right:18px;font-size:42px}.announcement-title{font-size:37px;max-width:85%}.announcement-copy p{font-size:15px}.announcement-button{display:block;width:100%;text-align:center;margin-top:17px}.physical-shelf{overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:8px}.physical-books{min-width:500px;justify-content:flex-start}.pb9{width:42px;height:151px}.pb10{width:36px;height:128px}}
+
+
+
+/* Stable individual spine identities for every rated book. The top-8 logic
+   changes order only; each book always keeps its own physical design. */
+.pb11{width:58px;height:180px;background:#758d9a;transform:rotate(-1.2deg)}
+.pb11 .title{font:13px/1 Georgia,"Times New Roman",serif;top:13px;left:16px}
+.pb11 .author{font:8px Arial,sans-serif;bottom:10px;left:6px}
+.pb12{width:49px;height:190px;background:#d0ad45;transform:rotate(1.1deg)}
+.pb12 .title{font:700 12px/1 Arial,sans-serif;top:13px;left:13px;text-transform:uppercase}
+.pb12 .author{font:8px Arial,sans-serif;bottom:9px;left:5px}
+.pb13{width:54px;height:170px;background:#b87861;transform:rotate(-.8deg)}
+.pb13 .title{font:italic 15px/1 Georgia,"Times New Roman",serif;top:12px;left:15px}
+.pb13 .author{font:8px Arial,sans-serif;bottom:9px;left:5px}
+.pb14{width:44px;height:188px;background:#a65742;transform:rotate(1.4deg)}
+.pb14:before{content:"";position:absolute;inset:7px 5px;border:1px solid rgba(23,23,19,.65)}
+.pb14 .title{font:700 11px/1 Arial,sans-serif;top:13px;left:13px;text-transform:uppercase}
+.pb14 .author{display:none}
+.pb15{width:67px;height:176px;background:#687f8d;transform:rotate(-1.1deg)}
+.pb15 .title{font:13px/1 Georgia,"Times New Roman",serif;top:12px;left:20px}
+.pb15 .author{font:8px Arial,sans-serif;bottom:9px;left:7px}
+.pb16{width:48px;height:185px;background:#80748d;transform:rotate(.9deg)}
+.pb16 .title{font:italic 13px/1 Georgia,"Times New Roman",serif;top:12px;left:14px}
+.pb16 .author{font:8px Arial,sans-serif;bottom:9px;left:5px}
+.pb17{width:61px;height:160px;background:#bdc4c4;transform:rotate(-1.5deg)}
+.pb17 .title{font:14px/1 Georgia,"Times New Roman",serif;top:12px;left:18px}
+.pb17 .author{font:8px Arial,sans-serif;bottom:9px;left:6px}
+.pb18{width:55px;height:179px;background:#c6b487;transform:rotate(1.2deg)}
+.pb18 .title{font:700 11px/1 Arial,sans-serif;top:12px;left:16px;text-transform:uppercase}
+.pb18 .author{font:8px Arial,sans-serif;bottom:9px;left:5px}
+@media(max-width:700px){
+ .pb11{width:44px;height:140px}.pb11 .title{font-size:9px;left:12px}
+ .pb12{width:39px;height:150px}.pb12 .title{font-size:8px;left:10px}
+ .pb13{width:41px;height:134px}.pb13 .title{font-size:10px;left:11px}
+ .pb14{width:34px;height:148px}.pb14 .title{font-size:8px;left:10px}
+ .pb15{width:50px;height:138px}.pb15 .title{font-size:9px;left:15px}
+ .pb16{width:37px;height:146px}.pb16 .title{font-size:9px;left:10px}
+ .pb17{width:47px;height:126px}.pb17 .title{font-size:9px;left:13px}
+ .pb18{width:42px;height:141px}.pb18 .title{font-size:8px;left:12px}
+}
+
+
+/* Original identities for the two November books; keep them stable on the shelf. */
+.pb9{width:56px;height:193px;background:linear-gradient(180deg,#d7e6e1 0%,#c3d8d2 56%,#e4efeb 100%);transform:rotate(-1.3deg);border-color:#203038;box-shadow:2px 2px 0 #171713}
+.pb9:before{content:"";position:absolute;left:7px;top:0;bottom:0;width:9px;background:linear-gradient(180deg,#d45142 0%,#af3a31 100%);border-right:1.5px solid #171713}
+.pb9:after{content:"★";position:absolute;top:9px;right:7px;font:15px/1 Georgia,serif;color:#b13a2e;transform:rotate(8deg)}
+.pb9 .title{overflow:visible!important;writing-mode:vertical-rl!important;transform:rotate(180deg)!important;position:absolute!important;top:14px!important;bottom:28px!important;left:20px!important;width:max-content!important;max-height:none!important;font:700 13px/1.02 "Arial Narrow",Arial,sans-serif!important;text-transform:uppercase;letter-spacing:.08em!important;color:#18353f}
+.pb9 .author{font:700 7px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;bottom:9px;left:20px;color:#203038}
+.pb10{width:48px;height:161px;background:#59707d;transform:rotate(1deg)}
+.pb10 .title{writing-mode:vertical-rl;transform:rotate(180deg);font:12px/1 Georgia,serif;top:13px;left:11px}
+.pb10 .author{display:none}
+.pb10 .title{overflow:visible!important;writing-mode:vertical-rl!important;transform:rotate(180deg)!important;letter-spacing:0!important;position:absolute!important;inset:10px auto 10px 50%!important;width:max-content!important;max-height:none!important;font-size:13px!important;line-height:1.1!important}
+@media(max-width:700px){
+ .pb9{width:46px;height:151px}
+ .pb9 .title{font-size:10px!important;left:17px!important;bottom:23px!important}
+ .pb9 .author{font-size:5.7px;left:17px}
+ .pb10{width:36px;height:128px}
+ .pb10 .title{font-size:10px!important}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><b>РКК</b><div class="links"><a href="#now">Сейчас читаем</a><a href="#read">Мы прочитали</a><a href="voting.html">Голосование</a><a href="stats.html">Статистика</a></div><a href="what-to-read.html">Что почитать?</a> <a href="library.html">Библиотека клуба</a> <a href="previously.html">Ранее в клубе</a> <a href="account.html">Личный кабинет</a></nav>
-<div style="margin:20px 0 0;padding:16px 20px;background:#c8a449;border:1px solid #171713;box-shadow:4px 4px 0 #171713;font:15px/1.4 Georgia,serif"><b>Голосование за выпуск №11 открыто!</b> Выбираем книги для крупной и малой формы. <a href="voting.html" style="text-decoration:underline;font-weight:bold">Проголосовать →</a></div>
-
+<nav><b>РКК</b><div class="links"><a href="#read">Мы прочитали</a><a href="voting.html">Голосование</a><a href="stats.html">Статистика</a></div><a href="what-to-read.html">Что почитать?</a> <a href="library.html">Библиотека клуба</a> <a href="previously.html">Ранее в клубе</a> <a href="account.html">Личный кабинет</a></nav>
+<aside aria-label="Открыто голосование до 22 ноября" class="voting-announcement"><div aria-hidden="true" class="announcement-star">✳</div><div class="announcement-copy"><div class="announcement-label">Выпуск № 11 · Книжный клуб выбирает</div><div class="announcement-title">Голосование открыто <em>до 22 ноября</em></div><p>Выбираем следующие произведения крупной и малой формы. Успей оставить свой голос до конца 22 ноября.</p></div><a class="announcement-button" href="voting.html">Перейти к голосованию ↗</a></aside>
 <header class="hero">
-<h1>Рисанкин<br>Книжный Клуб</h1>
+<h1>Рисанкин<br/>Книжный Клуб</h1>
 <div class="scribble">✶ книжный архив</div>
 </header>
 
-<section class="meeting collage-meeting" id="now">
-  <div class="meeting-kicker">СЛЕДУЮЩАЯ ВСТРЕЧА</div>
-  <div class="meeting-date">13 НОЯБРЯ · 19:00</div>
-  <div class="place-line">Место встречи: <em>«Хитрые люди»</em></div>
-  <div class="place-line">Адрес: 4-й Сыромятнический пер., 1/8, стр. 10 · <a class="map-text" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%204-%D0%B9%20%D0%A1%D1%8B%D1%80%D0%BE%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%201/8%2C%20%D1%81%D1%82%D1%80.%2010" target="_blank" rel="noopener noreferrer">Яндекс Карты ↗</a></div>
 
-  <div class="reading-collage">
-    <article class="collage-book vonnegut">
-      <div class="tape tape-a"></div>
-      <div class="collage-cover red-frame">
-        <img src="star-ticket.jpg" alt="Василий Аксёнов — Звёздный билет">
-      </div>
-      <div class="book-caption von-caption">
-        <h3>Звёздный билет</h3>
-        <p>Василий Аксёнов</p>
-      </div>
-      <span class="doodle doodle-red">☆</span>
-    </article>
-
-    <article class="collage-book dick">
-      <div class="paper-note">
-        <h3>Штабс-капитан<br>Рыбников</h3>
-        <p>Александр Куприн</p>
-      </div>
-      <div class="collage-cover blue-frame">
-        <img src="captain-rybnikov.jpg" alt="Александр Куприн — Штабс-капитан Рыбников">
-      </div>
-      <span class="paperclip">⌇</span>
-      <span class="doodle doodle-black">✶</span>
-    </article>
-  </div>
-
-</section>
-<section class="live-rsvp" id="rsvp">
- <div class="rsvp-paper">
-  <div class="rsvp-kicker">13 ноября · 19:00</div>
-  <h2>Ты будешь?</h2>
-  <div class="rsvp-actions">
-   <button type="button" data-answer="yes" onclick="setRsvp('yes')">Буду</button>
-   <button type="button" data-answer="no" onclick="setRsvp('no')">Не буду</button>
-  </div>
-  <div id="rsvp-status">Выбери ответ — его потом можно изменить.</div>
-  <div data-who></div>
- </div>
- <div class="rsvp-counts">
-  <div><b id="yes-count">—</b><span>будут</span></div>
-  <div><b id="no-count">—</b><span>не будут</span></div>
- </div>
-</section>
-<section id="read" class="read-library real-books">
+<section class="read-library real-books" id="read">
 <h2 class="section-title">Мы прочитали</h2>
-<div class="archive-stamp"><b>16 книг</b><span>средняя оценка 7,6</span></div>
-
+<div class="archive-stamp"><b>18 книг</b><span>средняя оценка 7,5</span></div>
 <div class="physical-shelf">
-  <div class="physical-books">
-    <a class="pbook pb1" href="hotel.html"><span class="title">Отель «У погибшего альпиниста»</span><span class="author">Стругацкие</span></a>
-    <a class="pbook pb2" href="gone-with-the-wind.html"><span class="title">Унесённые ветром</span><span class="author">М. Митчелл</span></a>
-    <a class="pbook pb3" href="poor-prince.html"><span class="title">Бедный принц</span><span class="author">А. Куприн</span></a>
-    <a class="pbook pb4" href="reader.html"><span class="title">ЧТЕЦ</span><span class="author">Б. Шлинк</span></a>
-    <a class="pbook pb5" href="fight-club.html"><span class="title">Бойцовский клуб</span><span class="author">Чак Паланик</span></a>
-    <a class="pbook pb6" href="uncle-vanya.html"><span class="title">Дядя Ваня</span><span class="author">А. П. Чехов</span></a>
-    <a class="pbook pb7" href="we-can-remember-it-for-you-wholesale.html"><span class="title">Мы вам всё припомним</span><span class="author">Ф. К. Дик</span></a>
-    <a class="pbook pb8" href="burn-the-barn.html"><span class="title">Сжечь сарай</span><span class="author">Х. Мураками</span></a>
-  </div>
-  <div class="shelf-board"></div>
+<div class="physical-books" id="club-top-eight" data-ranking-shelf="top8" aria-label="8 книг с наивысшим рейтингом клуба">
+<a class="pbook pb9" href="star-ticket.html" aria-label="Звёздный билет — В. Аксёнов (рейтинг клуба: 9,6/10)" title="Звёздный билет — В. Аксёнов"><span class="title">Звёздный билет</span><span class="author">В. Аксёнов</span></a>
+<a class="pbook pb1" href="hotel.html" aria-label="Отель «У погибшего альпиниста» — Стругацкие (рейтинг клуба: 9,0/10)" title="Отель «У погибшего альпиниста» — Стругацкие"><span class="title">Отель «У погибшего альпиниста»</span><span class="author">Стругацкие</span></a>
+<a class="pbook pb2" href="gone-with-the-wind.html" aria-label="Унесённые ветром — М. Митчелл (рейтинг клуба: 8,8/10)" title="Унесённые ветром — М. Митчелл"><span class="title">Унесённые ветром</span><span class="author">М. Митчелл</span></a>
+<a class="pbook pb3" href="poor-prince.html" aria-label="Бедный принц — А. Куприн (рейтинг клуба: 8,3/10)" title="Бедный принц — А. Куприн"><span class="title">Бедный принц</span><span class="author">А. Куприн</span></a>
+<a class="pbook pb4" href="reader.html" aria-label="Чтец — Б. Шлинк (рейтинг клуба: 8,2/10)" title="Чтец — Б. Шлинк"><span class="title">Чтец</span><span class="author">Б. Шлинк</span></a>
+<a class="pbook pb5" href="fight-club.html" aria-label="Бойцовский клуб — Ч. Паланик (рейтинг клуба: 8,0/10)" title="Бойцовский клуб — Ч. Паланик"><span class="title">Бойцовский клуб</span><span class="author">Ч. Паланик</span></a>
+<a class="pbook pb6" href="uncle-vanya.html" aria-label="Дядя Ваня — А. Чехов (рейтинг клуба: 8,0/10)" title="Дядя Ваня — А. Чехов"><span class="title">Дядя Ваня</span><span class="author">А. Чехов</span></a>
+<a class="pbook pb7" href="we-can-remember-it-for-you-wholesale.html" aria-label="Мы вам всё припомним — Ф. Дик (рейтинг клуба: 7,6/10)" title="Мы вам всё припомним — Ф. Дик"><span class="title">Мы вам всё припомним</span><span class="author">Ф. Дик</span></a>
 </div>
-
+<div class="shelf-board"></div>
+</div>
 <a class="archive-more" href="archive.html">Открыть остальной архив</a>
 </section>
-
-<section class="vote-live" id="vote-live" aria-label="Текущие результаты голосования">
- <div class="vote-live-head"><h2>Как голосует<br>клуб?</h2><div class="vote-live-meta"><b id="voter-count">—</b> участников<br>проголосовало</div></div>
- <div class="vote-stats-sheet"><div class="vote-columns">
- <div class="vote-board" id="large-results"><h3>Крупная форма</h3><div class="vote-row" data-vote-book="babel-odessa"><span class="vote-name">Одесские рассказы</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
+<section aria-label="Текущие результаты голосования" class="vote-live" id="vote-live">
+<div class="vote-live-head"><h2>Как голосует<br/>клуб?</h2><div class="vote-live-meta"><b id="voter-count">—</b> участников<br/>проголосовало</div></div>
+<div class="vote-stats-sheet"><div class="vote-columns">
+<div class="vote-board" id="large-results"><h3>Крупная форма</h3><div class="vote-row" data-vote-book="babel-odessa"><span class="vote-name">Одесские рассказы</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="gaiman-coraline"><span class="vote-name">Коралина</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="kafka-trial"><span class="vote-name">Процесс</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="tolstoy-childhood"><span class="vote-name">Детство</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="shakespeare-julius-caesar"><span class="vote-name">Юлий Цезарь</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div></div>
- <div class="vote-board" id="small-results"><h3>Малая форма</h3><div class="vote-row" data-vote-book="joyce-dead"><span class="vote-name">Мёртвые</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
+<div class="vote-board" id="small-results"><h3>Малая форма</h3><div class="vote-row" data-vote-book="joyce-dead"><span class="vote-name">Мёртвые</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="lovecraft-dunwich"><span class="vote-name">Ужас Данвича</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="mann-clown"><span class="vote-name">Паяц</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="brodsky-eclogue-5"><span class="vote-name">Эклога 5-я (летняя)</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div>
 <div class="vote-row" data-vote-book="borges-tlon"><span class="vote-name">Тлён, Укбар, Орбис Терциус</span><span class="vote-line"><i></i></span><b class="vote-num">0</b></div></div>
- </div></div><a class="vote-main-link" href="voting.html">Проголосовать за книги →</a>
+</div></div><a class="vote-main-link" href="voting.html">Проголосовать за книги →</a>
 </section>
-
-<div id="book-modal" class="modal" onclick="if(event.target===this)closeBook()">
+<div class="modal" id="book-modal" onclick="if(event.target===this)closeBook()">
 <div class="book-page">
 <button class="close" onclick="closeBook()">×</button>
 <div class="frame-art"><div class="fake-cover">КНИГА</div></div>
@@ -937,101 +956,13 @@ display:grid;grid-template-columns:.75fr 1fr;gap:40px;box-shadow:10px 12px 0 #00
 <p class="review">Здесь будет страница книги: рейтинг клуба, автор, ваша рецензия и детали. Обложка — в отдельной неровной рамке.</p>
 <div class="big-rating" id="modal-rating"></div></div>
 </div></div>
-
-
 <footer><span>Рисанкин Книжный Клуб</span><span>архив клуба</span></footer>
-</div>
-
-
-<div id="identity-modal" class="identity-modal" onclick="if(event.target===this)closeIdentity()">
- <div class="identity-card">
-  <button class="identity-close" onclick="closeIdentity()" aria-label="Закрыть">×</button>
-  <div class="identity-kicker">один раз на этом устройстве</div>
-  <h2>Как тебя зовут?</h2>
-  <p>Имя нужно, чтобы твой ответ можно было изменить, а не записывать заново.</p>
-  <label>Имя<input id="first-name" autocomplete="given-name"></label>
-  <label>Фамилия<input id="last-name" autocomplete="family-name"></label>
-  <div id="identity-error"></div>
-  <button class="identity-save" onclick="saveIdentity()">Продолжить</button>
- </div>
 </div>
 
 <script>
 const SB_URL='https://ucdbshgntaqtojsuzvqb.supabase.co';
 const SB_KEY='sb_publishable_4MG1e0_NkmBoFfV4o6-v4g_oAAeeDfv';
 const SB_HEADERS={"apikey":SB_KEY,"Authorization":"Bearer "+SB_KEY,"Content-Type":"application/json"};
-
-function esc(s){return String(s||"").trim().replace(/\s+/g," ");}
-function participantName(){return localStorage.getItem("rkk_participant_name")||"";}
-async function participantId(fullName){
-  const normalized=esc(fullName).toLocaleLowerCase("ru-RU");
-  const data=new TextEncoder().encode(normalized);
-  const hash=await crypto.subtle.digest("SHA-256",data);
-  return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,"0")).join("");
-}
-function openIdentity(after){
-  window._afterIdentity=after;
-  document.getElementById("identity-modal").classList.add("show");
-  const saved=participantName().split(" ");
-  document.getElementById("first-name").value=saved.shift()||"";
-  document.getElementById("last-name").value=saved.join(" ")||"";
-}
-function closeIdentity(){document.getElementById("identity-modal").classList.remove("show");}
-function saveIdentity(){
-  const f=esc(document.getElementById("first-name").value);
-  const l=esc(document.getElementById("last-name").value);
-  const err=document.getElementById("identity-error");
-  if(!f||!l){err.textContent="Нужны и имя, и фамилия.";return;}
-  localStorage.setItem("rkk_participant_name",f+" "+l);
-  err.textContent=""; closeIdentity();
-  const fn=window._afterIdentity; window._afterIdentity=null; if(fn) fn();
-  refreshWho();
-}
-function refreshWho(){
-  document.querySelectorAll("[data-who]").forEach(el=>{
-    const n=participantName();
-    el.innerHTML=n ? `Вы: <b>${n}</b> · <button type="button" class="who-change" onclick="openIdentity()">сменить участника</button>` : "";
-  });
-}
-
-const MEETING_ID="2026-11-06";
-async function loadRsvp(){
- try{
-  const res=await fetch(`${SB_URL}/rest/v1/rsvp?meeting_id=eq.${MEETING_ID}&select=participant_id,answer`,{headers:SB_HEADERS});
-  if(!res.ok) throw new Error(await res.text());
-  const rows=await res.json();
-  document.getElementById("yes-count").textContent=rows.filter(x=>x.answer==="yes").length;
-  document.getElementById("no-count").textContent=rows.filter(x=>x.answer==="no").length;
-  const n=participantName();
-  if(n){
-   const pid=await participantId(n), mine=rows.find(x=>x.participant_id===pid);
-   document.querySelectorAll(".rsvp-actions button").forEach(b=>b.classList.toggle("active",mine&&b.dataset.answer===mine.answer));
-   if(mine) document.getElementById("rsvp-status").textContent=mine.answer==="yes"?"Ответ сохранён: буду.":"Ответ сохранён: не буду.";
-  }
- }catch(e){document.getElementById("rsvp-status").textContent="Не получилось загрузить ответы. Попробуй обновить страницу."}
- refreshWho();
-}
-async function setRsvp(answer){
- if(!participantName()){openIdentity(()=>setRsvp(answer));return;}
- const pid=await participantId(participantName());
- const body={participant_id:pid,meeting_id:MEETING_ID,answer,updated_at:new Date().toISOString()};
- const res=await fetch(`${SB_URL}/rest/v1/rsvp?on_conflict=participant_id,meeting_id`,{
-   method:"POST",headers:{...SB_HEADERS,"Prefer":"resolution=merge-duplicates"},body:JSON.stringify(body)
- });
- if(!res.ok){document.getElementById("rsvp-status").textContent="Не удалось сохранить ответ.";return;}
- try {
-  const nameRes=await fetch(`${SB_URL}/rest/v1/rpc/save_rsvp_participant_name`,{
-   method:"POST",headers:SB_HEADERS,
-   body:JSON.stringify({p_meeting_id:MEETING_ID,p_participant_id:pid,p_full_name:participantName(),p_answer:answer})
-  });
-  if(!nameRes.ok) throw new Error(await nameRes.text());
- } catch(e) {
-  await loadRsvp();
-  document.getElementById("rsvp-status").textContent="Ответ сохранён, но имя не удалось записать в список. Сообщи организатору.";
-  return;
- }
- await loadRsvp();
-}
 
 const VOTING_ID="next-meeting-2026-11";
 const VOTE_BOOKS={
@@ -1059,6 +990,60 @@ async function loadVoteResults(){
    document.getElementById("voter-count").textContent="—";
  }
 }
-document.addEventListener("DOMContentLoaded",()=>{loadRsvp();loadVoteResults();});
+document.addEventListener("DOMContentLoaded",()=>{loadVoteResults();});
+</script>
+
+<script id="top-eight-logic">
+/* Обновление главной клубной полки по фактическим оценкам, без изменения личных полок. */
+(()=>{'use strict';
+const ratedBooks=[{"id":"book-275acca99856","title":"Звёздный билет","author":"В. Аксёнов","page":"star-ticket.html","base":9.6,"ratingIds":["book-275acca99856","star-ticket"],"spineClass":"pb9"},{"id":"book-0d3417e98698","title":"Отель «У погибшего альпиниста»","author":"Стругацкие","page":"hotel.html","base":9.0,"ratingIds":["book-0d3417e98698","hotel"],"spineClass":"pb1"},{"id":"book-9ea2ceb546c7","title":"Унесённые ветром","author":"М. Митчелл","page":"gone-with-the-wind.html","base":8.8,"ratingIds":["book-9ea2ceb546c7","gone-with-the-wind"],"spineClass":"pb2"},{"id":"book-128ea9287192","title":"Бедный принц","author":"А. Куприн","page":"poor-prince.html","base":8.3,"ratingIds":["book-128ea9287192","poor-prince"],"spineClass":"pb3"},{"id":"book-796a9b734d3b","title":"Чтец","author":"Б. Шлинк","page":"reader.html","base":8.2,"ratingIds":["book-796a9b734d3b","reader"],"spineClass":"pb4"},{"id":"book-a63c44b42961","title":"Бойцовский клуб","author":"Ч. Паланик","page":"fight-club.html","base":8.0,"ratingIds":["book-a63c44b42961","fight-club"],"spineClass":"pb5"},{"id":"book-af6fa7337ee9","title":"Дядя Ваня","author":"А. Чехов","page":"uncle-vanya.html","base":8.0,"ratingIds":["book-af6fa7337ee9","uncle-vanya"],"spineClass":"pb6"},{"id":"book-62a0bcbf4766","title":"Мы вам всё припомним","author":"Ф. Дик","page":"we-can-remember-it-for-you-wholesale.html","base":7.6,"ratingIds":["book-62a0bcbf4766","we-can-remember-it-for-you-wholesale"],"spineClass":"pb7"},{"id":"book-110ec416d51e","title":"Сжечь сарай","author":"Х. Мураками","page":"burn-the-barn.html","base":7.5,"ratingIds":["book-110ec416d51e","burn-the-barn"],"spineClass":"pb8"},{"id":"book-186c9b6e72ef","title":"Если все кошки в мире исчезнут","author":"Г. Кавамура","page":"if-cats-disappeared.html","base":7.5,"ratingIds":["book-186c9b6e72ef","if-cats-disappeared"],"spineClass":"pb11"},{"id":"book-c7fc6196cd2a","title":"Йеллоуфейс","author":"Р. Куанг","page":"yellowface.html","base":7.4,"ratingIds":["book-c7fc6196cd2a","yellowface"],"spineClass":"pb12"},{"id":"book-7bd1d58140f9","title":"Времетрясение","author":"К. Воннегут","page":"timequake.html","base":7.3,"ratingIds":["book-7bd1d58140f9","timequake"],"spineClass":"pb13"},{"id":"book-4a1f5397047e","title":"Танцующий Шива","author":"В. Шукшин","page":"dancing-shiva.html","base":6.8,"ratingIds":["book-4a1f5397047e","dancing-shiva"],"spineClass":"pb14"},{"id":"book-c77447760a38","title":"Занятой человек","author":"В. Набоков","page":"busy-man.html","base":6.8,"ratingIds":["book-c77447760a38","busy-man"],"spineClass":"pb15"},{"id":"book-345963e5d031","title":"Некромент","author":"В. Пелевин","page":"necroment.html","base":6.6,"ratingIds":["book-345963e5d031","necroment"],"spineClass":"pb16"},{"id":"book-790ed68d8cd6","title":"Всё лето в один день","author":"Р. Брэдбери","page":"all-summer-in-a-day.html","base":6.6,"ratingIds":["book-790ed68d8cd6","all-summer-in-a-day"],"spineClass":"pb17"},{"id":"book-571926256b13","title":"Доллар и двадцать центов","author":"Ч. Буковски","page":"dollar-and-twenty-cents.html","base":5.5,"ratingIds":["book-571926256b13","dollar-and-twenty-cents"],"spineClass":"pb18"},{"id":"book-0c3e5bf169f2","title":"Штабс-капитан Рыбников","author":"А. Куприн","page":"captain-rybnikov.html","base":5.3,"ratingIds":["book-0c3e5bf169f2","captain-rybnikov"],"spineClass":"pb10"}];
+const shelf=document.getElementById('club-top-eight');
+if(!shelf)return;
+const originalOrder=new Map(ratedBooks.map((b,i)=>[b.id,i]));
+function scoreOrder(votes){
+ const aliases=new Map();
+ for(const book of ratedBooks)for(const key of book.ratingIds)aliases.set(key,book.id);
+ const sums=new Map();
+ for(const row of votes){
+   const id=aliases.get(row.book_id),rating=Number(row.rating);
+   if(!id||!Number.isInteger(rating)||rating<1||rating>10)continue;
+   const acc=sums.get(id)||{sum:0,count:0};acc.sum+=rating;acc.count++;sums.set(id,acc);
+ }
+ return ratedBooks.map(b=>{
+   const v=sums.get(b.id)||{sum:0,count:0};
+   return {...b,score:(b.base+v.sum)/(1+v.count)};
+ }).sort((a,b)=>b.score-a.score || originalOrder.get(a.id)-originalOrder.get(b.id));
+}
+function renderTopEight(ordered){
+ const nodes=ordered.slice(0,8).map((book,i)=>{
+   const link=document.createElement('a');
+   link.className='pbook '+book.spineClass;
+   link.href=book.page;
+   link.title=book.title+' — '+book.author;
+   link.setAttribute('aria-label',book.title+' — '+book.author+' (рейтинг '+book.score.toFixed(1).replace('.',',')+' из 10)');
+   const title=document.createElement('span');title.className='title';title.textContent=book.title;
+   const author=document.createElement('span');author.className='author';author.textContent=book.author;
+   link.append(title,author);return link;
+ });
+ shelf.replaceChildren(...nodes);
+}
+// Correct top eight is immediately visible even if Supabase is unavailable.
+renderTopEight(scoreOrder([]));
+(async()=>{
+ try{
+   const all=[];
+   for(let offset=0;offset<50000;offset+=1000){
+     const r=await fetch(SB_URL+'/rest/v1/public_book_rating_values?select=book_id,rating',{
+       headers:{...SB_HEADERS,'Range':offset+'-'+(offset+999)}});
+     if(!r.ok)throw Error('Не удалось получить оценки: '+r.status);
+     const rows=await r.json();
+     if(!Array.isArray(rows))throw Error('Некорректный ответ сервера');
+     all.push(...rows);
+     if(rows.length<1000)break;
+   }
+   renderTopEight(scoreOrder(all));
+ }catch(e){console.warn('Клубная полка: используются последние базовые оценки',e)}
+})();
+})();
 </script>
 </body></html>

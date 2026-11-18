@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Мы прочитали — Рисанкин Книжный Клуб</title>
 <style>
 :root{--paper:#f1e7d5;--ink:#171713;--red:#9f5145;--blue:#718795;--yellow:#c8a449;--green:#7d8970;--grey:#c5bdaf}
@@ -75,155 +76,155 @@ footer{border-top:1px solid var(--ink);padding:20px 0 40px;display:flex;justify-
 }
 .timequake-mobile{display:none}
 @media(max-width:800px){.timequake-mobile{display:inline}.timequake-desktop{display:none}}
+
+/* November 2026: new books in the reading archive */
+.star-ticket .spine{background:#ba5648;color:#f9edda;height:355px;transform:rotate(-1.1deg)}
+.captain-rybnikov .spine{background:#526875;color:#f8efdf;height:320px;margin-top:34px;transform:rotate(.9deg)}
+@media(max-width:800px){.star-ticket .spine,.captain-rybnikov .spine{height:245px;margin-top:0}.star-ticket .title,.captain-rybnikov .title{font-size:clamp(18px,5.5vw,24px)}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav><b>РКК</b><a class="back" href="index.html">← на главную</a></nav>
-
 <header class="hero">
- <div>
-  <div class="eyebrow">Рисанкин Книжный Клуб · архив</div>
-  <h1>Мы<br>прочитали</h1>
- </div>
- <div class="intro">
-  Здесь лежит всё, до чего мы уже добрались — от 9/10 до 5,5/10.
-  <div class="stats"><span class="tag">16 книг</span><span class="tag">средняя оценка 7,6</span></div>
- </div>
+<div>
+<div class="eyebrow">Рисанкин Книжный Клуб · архив</div>
+<h1>Мы<br/>прочитали</h1>
+</div>
+<div class="intro">Здесь лежит всё, до чего мы уже добрались — от 9,6/10 до 5,3/10. <div class="stats"><span class="tag">18 книг</span><span class="tag">средняя оценка 7,5</span></div>
+</div>
 </header>
-
 <main class="archive">
- <div class="shelf-label">
-   <h2>Полка № 1</h2>
-   <span>по убыванию оценки</span>
- </div>
- <div class="grid">
-   <a class="book hotel" href="hotel.html">
-      <div class="spine">
-        <span class="rank">01</span>
-        <div class="title">Отель «У погибшего альпиниста»</div>
-        <div class="author">Братья Стругацкие</div>
-        <div class="score">9<small>/10</small></div>
-      </div>
-    </a>
-<a class="book wind" href="gone-with-the-wind.html">
-      <div class="spine">
-        <span class="rank">02</span>
-        <div class="title">Унесённые ветром</div>
-        <div class="author">Маргарет Митчелл</div>
-        <div class="score">8,8<small>/10</small></div>
-      </div>
-    </a>
-<a class="book prince" href="poor-prince.html">
-      <div class="spine">
-        <span class="rank">03</span>
-        <div class="title">Бедный принц</div>
-        <div class="author">Александр Куприн</div>
-        <div class="score">8,3<small>/10</small></div>
-      </div>
-    </a>
-<a class="book reader" href="reader.html">
-      <div class="spine">
-        <span class="rank">04</span>
-        <div class="title">Чтец</div>
-        <div class="author">Бернхард Шлинк</div>
-        <div class="score">8,2<small>/10</small></div>
-      </div>
-    </a>
-<a class="book fight" href="fight-club.html">
-      <div class="spine">
-        <span class="rank">05</span>
-        <div class="title">Бойцовский клуб</div>
-        <div class="author">Чак Паланик</div>
-        <div class="score">8<small>/10</small></div>
-      </div>
-    </a>
-<a class="book vanya" href="uncle-vanya.html">
-      <div class="spine">
-        <span class="rank">06</span>
-        <div class="title">Дядя Ваня</div>
-        <div class="author">А. П. Чехов</div>
-        <div class="score">8<small>/10</small></div>
-      </div>
-    </a>
-<a class="book new-dick" href="we-can-remember-it-for-you-wholesale.html">
-  <div class="spine"><span class="rank">07</span><div class="title">Мы вам всё припомним</div><div class="author">Филип К. Дик</div><div class="score">7,6<small>/10</small></div></div>
-</a>
-<a class="book barn" href="burn-the-barn.html">
-      <div class="spine">
-        <span class="rank">08</span>
-        <div class="title">Сжечь сарай</div>
-        <div class="author">Харуки Мураками</div>
-        <div class="score">7,5<small>/10</small></div>
-      </div>
-    </a>
-<a class="book cats" href="if-cats-disappeared.html">
-      <div class="spine">
-        <span class="rank">09</span>
-        <div class="title">Если все кошки в мире исчезнут</div>
-        <div class="author">Гэнки Кавамура</div>
-        <div class="score">7,5<small>/10</small></div>
-      </div>
-    </a>
-<a class="book yellow" href="yellowface.html">
-      <div class="spine">
-        <span class="rank">10</span>
-        <div class="title">Йеллоуфейс</div>
-        <div class="author">Ребекка Куанг</div>
-        <div class="score">7,4<small>/10</small></div>
-      </div>
-    </a>
-<a class="book new-timequake" href="timequake.html">
-  <div class="spine"><span class="rank">11</span><div class="title"><span class="timequake-mobile">Време-<br>трясение</span><span class="timequake-desktop">Времетрясение</span></div><div class="author">Курт Воннегут</div><div class="score">7,3<small>/10</small></div></div>
-</a>
-<a class="book shiva" href="dancing-shiva.html">
-      <div class="spine">
-        <span class="rank">12</span>
-        <div class="title">Танцующий Шива</div>
-        <div class="author">Василий Шукшин</div>
-        <div class="score">6,8<small>/10</small></div>
-      </div>
-    </a>
-<a class="book busy" href="busy-man.html">
-      <div class="spine">
-        <span class="rank">13</span>
-        <div class="title">Занятой человек</div>
-        <div class="author">Владимир Набоков</div>
-        <div class="score">6,8<small>/10</small></div>
-      </div>
-    </a>
-<a class="book necro" href="necroment.html">
-      <div class="spine">
-        <span class="rank">14</span>
-        <div class="title">Некромент</div>
-        <div class="author">Виктор Пелевин</div>
-        <div class="score">6,6<small>/10</small></div>
-      </div>
-    </a>
-<a class="book summer" href="all-summer-in-a-day.html">
-      <div class="spine">
-        <span class="rank">15</span>
-        <div class="title">Всё лето в один день</div>
-        <div class="author">Рэй Брэдбери</div>
-        <div class="score">6,6<small>/10</small></div>
-      </div>
-    </a>
-<a class="book dollar" href="dollar-and-twenty-cents.html">
-      <div class="spine">
-        <span class="rank">16</span>
-        <div class="title">Доллар и двадцать центов</div>
-        <div class="author">Чарльз Буковски</div>
-        <div class="score">5,5<small>/10</small></div>
-      </div>
-    </a>
- </div>
- <div class="shelf"></div>
- <div class="note">Нажми на любую книгу — у каждой внутри своя отдельная страница и собственный маленький визуальный мир.</div>
-</main>
+<div class="shelf-label">
+<h2>Полка № 1</h2>
+<span>по убыванию оценки</span>
+</div>
+<div class="grid">
 
-<footer><span>Рисанкин Книжный Клуб</span><span>14 прочитанных книг</span></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="book star-ticket" href="star-ticket.html"><div class="spine"><span class="rank">01</span><div class="title">Звёздный билет</div><div class="author">Василий Аксёнов</div><div class="score">9,6<small>/10</small></div></div></a><a class="book hotel" href="hotel.html">
+<div class="spine">
+<span class="rank">02</span>
+<div class="title">Отель «У погибшего альпиниста»</div>
+<div class="author">Братья Стругацкие</div>
+<div class="score">9<small>/10</small></div>
+</div>
+</a><a class="book wind" href="gone-with-the-wind.html">
+<div class="spine">
+<span class="rank">03</span>
+<div class="title">Унесённые ветром</div>
+<div class="author">Маргарет Митчелл</div>
+<div class="score">8,8<small>/10</small></div>
+</div>
+</a><a class="book prince" href="poor-prince.html">
+<div class="spine">
+<span class="rank">04</span>
+<div class="title">Бедный принц</div>
+<div class="author">Александр Куприн</div>
+<div class="score">8,3<small>/10</small></div>
+</div>
+</a><a class="book reader" href="reader.html">
+<div class="spine">
+<span class="rank">05</span>
+<div class="title">Чтец</div>
+<div class="author">Бернхард Шлинк</div>
+<div class="score">8,2<small>/10</small></div>
+</div>
+</a><a class="book fight" href="fight-club.html">
+<div class="spine">
+<span class="rank">06</span>
+<div class="title">Бойцовский клуб</div>
+<div class="author">Чак Паланик</div>
+<div class="score">8<small>/10</small></div>
+</div>
+</a><a class="book vanya" href="uncle-vanya.html">
+<div class="spine">
+<span class="rank">07</span>
+<div class="title">Дядя Ваня</div>
+<div class="author">А. П. Чехов</div>
+<div class="score">8<small>/10</small></div>
+</div>
+</a><a class="book new-dick" href="we-can-remember-it-for-you-wholesale.html">
+<div class="spine"><span class="rank">08</span><div class="title">Мы вам всё припомним</div><div class="author">Филип К. Дик</div><div class="score">7,6<small>/10</small></div></div>
+</a><a class="book barn" href="burn-the-barn.html">
+<div class="spine">
+<span class="rank">09</span>
+<div class="title">Сжечь сарай</div>
+<div class="author">Харуки Мураками</div>
+<div class="score">7,5<small>/10</small></div>
+</div>
+</a><a class="book cats" href="if-cats-disappeared.html">
+<div class="spine">
+<span class="rank">10</span>
+<div class="title">Если все кошки в мире исчезнут</div>
+<div class="author">Гэнки Кавамура</div>
+<div class="score">7,5<small>/10</small></div>
+</div>
+</a><a class="book yellow" href="yellowface.html">
+<div class="spine">
+<span class="rank">11</span>
+<div class="title">Йеллоуфейс</div>
+<div class="author">Ребекка Куанг</div>
+<div class="score">7,4<small>/10</small></div>
+</div>
+</a><a class="book new-timequake" href="timequake.html">
+<div class="spine"><span class="rank">12</span><div class="title"><span class="timequake-mobile">Време-<br/>трясение</span><span class="timequake-desktop">Времетрясение</span></div><div class="author">Курт Воннегут</div><div class="score">7,3<small>/10</small></div></div>
+</a><a class="book shiva" href="dancing-shiva.html">
+<div class="spine">
+<span class="rank">13</span>
+<div class="title">Танцующий Шива</div>
+<div class="author">Василий Шукшин</div>
+<div class="score">6,8<small>/10</small></div>
+</div>
+</a><a class="book busy" href="busy-man.html">
+<div class="spine">
+<span class="rank">14</span>
+<div class="title">Занятой человек</div>
+<div class="author">Владимир Набоков</div>
+<div class="score">6,8<small>/10</small></div>
+</div>
+</a><a class="book necro" href="necroment.html">
+<div class="spine">
+<span class="rank">15</span>
+<div class="title">Некромент</div>
+<div class="author">Виктор Пелевин</div>
+<div class="score">6,6<small>/10</small></div>
+</div>
+</a><a class="book summer" href="all-summer-in-a-day.html">
+<div class="spine">
+<span class="rank">16</span>
+<div class="title">Всё лето в один день</div>
+<div class="author">Рэй Брэдбери</div>
+<div class="score">6,6<small>/10</small></div>
+</div>
+</a><a class="book dollar" href="dollar-and-twenty-cents.html">
+<div class="spine">
+<span class="rank">17</span>
+<div class="title">Доллар и двадцать центов</div>
+<div class="author">Чарльз Буковски</div>
+<div class="score">5,5<small>/10</small></div>
+</div>
+</a><a class="book captain-rybnikov" href="captain-rybnikov.html"><div class="spine"><span class="rank">18</span><div class="title">Штабс-капитан Рыбников</div><div class="author">Александр Куприн</div><div class="score">5,3<small>/10</small></div></div></a></div>
+<div class="shelf"></div>
+<div class="note">Нажми на любую книгу — у каждой внутри своя отдельная страница и собственный маленький визуальный мир.</div>
+</main>
+<footer><span>Рисанкин Книжный Клуб</span><span>18 прочитанных книг</span></footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-<script defer src="unified-ratings.js"></script>
+<script defer="" src="unified-ratings.js"></script>
 </body>
 </html>

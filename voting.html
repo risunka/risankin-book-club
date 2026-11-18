@@ -1,7 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Голосование — Рисанкин Книжный Клуб</title>
 <style>
 :root{--p:#f1e7d5;--i:#171713;--r:#a95346;--b:#708895;--y:#c8a449;--g:#78866d}
@@ -54,43 +55,42 @@ h2{font-size:39px}.cards{grid-template-columns:1fr;gap:15px}
 .identity-save{width:100%;margin-top:19px;padding:14px;border:1px solid #171713;background:#171713;color:#f3ead7;text-transform:uppercase;letter-spacing:.12em}
 #identity-error{font:12px Georgia,serif;margin-top:8px}.who-change{border:0;border-bottom:1px solid;background:none;padding:0;font:inherit;color:inherit}
 
+
+.vote-deadline{margin:22px 0 0;display:inline-flex;flex-direction:column;gap:5px;background:#e2bd59;border:1px solid #171713;box-shadow:4px 4px 0 #171713;padding:12px 17px;transform:rotate(-.8deg)}
+.vote-deadline b{font:20px/1.2 Georgia,serif}.vote-deadline span{font:10px Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.vote-closed-note{padding:14px 18px;border:1px solid #171713;background:#ded3bd;font:17px/1.4 Georgia,serif;margin:22px 0}
 </style></head>
 <body><div class="wrap">
 <nav><b>РКК</b><a href="index.html">← на главную</a></nav>
-<header class="hero"><div class="ey">Выпуск № 11 · выбираем вместе</div><h1>Голосование</h1><p>Можно выбрать несколько произведений в каждом разделе. Отмечай всё, что действительно хотелось бы прочитать.</p></header>
-
+<header class="hero"><div class="ey">Выпуск № 11 · выбираем вместе</div><h1>Голосование</h1><p>Можно выбрать несколько произведений в каждом разделе. Отмечай всё, что действительно хотелось бы прочитать.</p><div class="vote-deadline"><b>До 22 ноября 2026 включительно</b><span>Принимаем голоса до 23:59 по московскому времени</span></div></header>
 <section class="form" data-group="large"><div class="formhead"><h2>Крупная форма</h2><p>Можно выбрать несколько вариантов.</p></div><div class="cards">
-<label class="book"><input type="checkbox" data-book="babel-odessa"><article class="paper"><div class="num">01</div><div class="author">Исаак Бабель</div><div class="title">Одесские рассказы</div><p class="desc">Одесса начала XX века, Молдаванка, налётчики, торговцы и короли преступного мира. В центре историй - Беня Крик, который умеет договариваться, грабить и устраивать свадьбы с одинаковым размахом. Бабель превращает криминальные хроники в почти мифологический мир, где жестокость соседствует с юмором, а преступники живут по собственным законам чести.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="gaiman-coraline"><article class="paper"><div class="num">02</div><div class="author">Нил Гейман</div><div class="title">Коралина</div><p class="desc">Коралина переезжает с родителями в старый дом и обнаруживает дверь, за которой скрывается другая версия её жизни. Там родители внимательнее, еда вкуснее, а всё вокруг кажется гораздо интереснее. Правда, у обитателей этого мира вместо глаз пуговицы, а другая мама совсем не собирается отпускать девочку обратно.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="kafka-trial"><article class="paper"><div class="num">03</div><div class="author">Франц Кафка</div><div class="title">Процесс</div><p class="desc">Однажды утром Йозефа К. арестовывают, но не объясняют, в чём его обвиняют. При этом он может продолжать работать и жить обычной жизнью, только теперь вынужден участвовать в бесконечном судебном разбирательстве. Чем больше герой пытается разобраться в устройстве суда, тем меньше понимает, кто им управляет и существует ли вообще возможность оправдаться.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="tolstoy-childhood"><article class="paper"><div class="num">04</div><div class="author">Лев Толстой</div><div class="title">Детство</div><p class="desc">Десятилетний Николенька Иртеньев живёт в дворянской семье, любит мать, боится строгого учителя и переживает из-за собственной внешности. Первые обиды, неловкие поступки, детская влюблённость и семейные перемены постепенно разрушают привычный мир мальчика. Толстой показывает взросление через события, которые взрослым кажутся незначительными, а для ребёнка становятся настоящими потрясениями.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="shakespeare-julius-caesar"><article class="paper"><div class="num">05</div><div class="author">Уильям Шекспир</div><div class="title">Юлий Цезарь</div><p class="desc">После победы в гражданской войне Юлий Цезарь возвращается в Рим, где его растущая власть пугает сторонников республики. Группа заговорщиков решает убить диктатора, убедив Брута, что предательство друга необходимо ради свободы государства. Но устранить правителя оказывается гораздо проще, чем справиться с последствиями его смерти.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="babel-odessa" type="checkbox"/><article class="paper"><div class="num">01</div><div class="author">Исаак Бабель</div><div class="title">Одесские рассказы</div><p class="desc">Одесса начала XX века, Молдаванка, налётчики, торговцы и короли преступного мира. В центре историй - Беня Крик, который умеет договариваться, грабить и устраивать свадьбы с одинаковым размахом. Бабель превращает криминальные хроники в почти мифологический мир, где жестокость соседствует с юмором, а преступники живут по собственным законам чести.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="gaiman-coraline" type="checkbox"/><article class="paper"><div class="num">02</div><div class="author">Нил Гейман</div><div class="title">Коралина</div><p class="desc">Коралина переезжает с родителями в старый дом и обнаруживает дверь, за которой скрывается другая версия её жизни. Там родители внимательнее, еда вкуснее, а всё вокруг кажется гораздо интереснее. Правда, у обитателей этого мира вместо глаз пуговицы, а другая мама совсем не собирается отпускать девочку обратно.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="kafka-trial" type="checkbox"/><article class="paper"><div class="num">03</div><div class="author">Франц Кафка</div><div class="title">Процесс</div><p class="desc">Однажды утром Йозефа К. арестовывают, но не объясняют, в чём его обвиняют. При этом он может продолжать работать и жить обычной жизнью, только теперь вынужден участвовать в бесконечном судебном разбирательстве. Чем больше герой пытается разобраться в устройстве суда, тем меньше понимает, кто им управляет и существует ли вообще возможность оправдаться.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="tolstoy-childhood" type="checkbox"/><article class="paper"><div class="num">04</div><div class="author">Лев Толстой</div><div class="title">Детство</div><p class="desc">Десятилетний Николенька Иртеньев живёт в дворянской семье, любит мать, боится строгого учителя и переживает из-за собственной внешности. Первые обиды, неловкие поступки, детская влюблённость и семейные перемены постепенно разрушают привычный мир мальчика. Толстой показывает взросление через события, которые взрослым кажутся незначительными, а для ребёнка становятся настоящими потрясениями.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="shakespeare-julius-caesar" type="checkbox"/><article class="paper"><div class="num">05</div><div class="author">Уильям Шекспир</div><div class="title">Юлий Цезарь</div><p class="desc">После победы в гражданской войне Юлий Цезарь возвращается в Рим, где его растущая власть пугает сторонников республики. Группа заговорщиков решает убить диктатора, убедив Брута, что предательство друга необходимо ради свободы государства. Но устранить правителя оказывается гораздо проще, чем справиться с последствиями его смерти.</p><span class="mark"></span></article></label>
 </div><div class="counter">выбрано: <span>0</span></div></section>
-
 <section class="form" data-group="small"><div class="formhead"><h2>Малая форма</h2><p>Можно выбрать несколько вариантов.</p></div><div class="cards">
-<label class="book"><input type="checkbox" data-book="joyce-dead"><article class="paper"><div class="num">01</div><div class="author">Джеймс Джойс</div><div class="title">Мёртвые</div><p class="desc">Эпилог сборника «Дублинцы», повесть, признанная одной из вершин англоязычной прозы. Габриэль и его жена Грета отправляются на рождественский бал к своим тёткам. После вечера супруги идут в отель, чтобы провести время наедине. Габриэль думает о предстоящей близости, но когда Грета рассказывает ему об эпизоде из своей юности и начинает плакать, его мысли устремляются совсем в другую сторону.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="lovecraft-dunwich"><article class="paper"><div class="num">02</div><div class="author">Говард Лавкрафт</div><div class="title">Ужас Данвича</div><p class="desc">У Лавинии родился сын Уилбур. Странный мальчик, который слишком быстро рос и увеличивался в размерах, внушал страх жителям Данвича. Его деда считали колдуном, искавшим в чёрных книгах сведения о магических формулах и заклинаниях. Однако всё это только пролог к ужасу Данвича.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="mann-clown"><article class="paper"><div class="num">03</div><div class="author">Томас Манн</div><div class="title">Паяц</div><p class="desc">Главный герой родился в настолько обеспеченной семье, что никогда не работал и не боролся за выживание, как все остальные. Долгие годы он пытался наслаждаться жизнью, но в итоге пришёл в такое сильное отчаяние, что стал всерьёз размышлять о самоубийстве.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="brodsky-eclogue-5"><article class="paper"><div class="num">04</div><div class="author">Иосиф Бродский</div><div class="title">Эклога 5-я (летняя)</div><p class="desc">Летний пейзаж становится поводом для размышлений о времени, памяти и человеческом существовании. Бродский соединяет образы природы, античные мотивы и повседневные детали, постепенно превращая описание времени года в философское рассуждение. За привычными картинами лета проступает ощущение конечности жизни и равнодушного движения времени.</p><span class="mark"></span></article></label>
-<label class="book"><input type="checkbox" data-book="borges-tlon"><article class="paper"><div class="num">05</div><div class="author">Хорхе Луис Борхес</div><div class="title">Тлён, Укбар, Орбис Терциус</div><p class="desc">В одной из энциклопедий обнаруживается статья о загадочной стране Укбар, которой, похоже, никогда не существовало. Дальнейшие поиски приводят к описанию целой вымышленной планеты Тлён, обладающей собственной историей, языками и философией. Постепенно следы этого мира начинают проникать в реальность, заставляя усомниться в том, что вообще можно считать существующим.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="joyce-dead" type="checkbox"/><article class="paper"><div class="num">01</div><div class="author">Джеймс Джойс</div><div class="title">Мёртвые</div><p class="desc">Эпилог сборника «Дублинцы», повесть, признанная одной из вершин англоязычной прозы. Габриэль и его жена Грета отправляются на рождественский бал к своим тёткам. После вечера супруги идут в отель, чтобы провести время наедине. Габриэль думает о предстоящей близости, но когда Грета рассказывает ему об эпизоде из своей юности и начинает плакать, его мысли устремляются совсем в другую сторону.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="lovecraft-dunwich" type="checkbox"/><article class="paper"><div class="num">02</div><div class="author">Говард Лавкрафт</div><div class="title">Ужас Данвича</div><p class="desc">У Лавинии родился сын Уилбур. Странный мальчик, который слишком быстро рос и увеличивался в размерах, внушал страх жителям Данвича. Его деда считали колдуном, искавшим в чёрных книгах сведения о магических формулах и заклинаниях. Однако всё это только пролог к ужасу Данвича.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="mann-clown" type="checkbox"/><article class="paper"><div class="num">03</div><div class="author">Томас Манн</div><div class="title">Паяц</div><p class="desc">Главный герой родился в настолько обеспеченной семье, что никогда не работал и не боролся за выживание, как все остальные. Долгие годы он пытался наслаждаться жизнью, но в итоге пришёл в такое сильное отчаяние, что стал всерьёз размышлять о самоубийстве.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="brodsky-eclogue-5" type="checkbox"/><article class="paper"><div class="num">04</div><div class="author">Иосиф Бродский</div><div class="title">Эклога 5-я (летняя)</div><p class="desc">Летний пейзаж становится поводом для размышлений о времени, памяти и человеческом существовании. Бродский соединяет образы природы, античные мотивы и повседневные детали, постепенно превращая описание времени года в философское рассуждение. За привычными картинами лета проступает ощущение конечности жизни и равнодушного движения времени.</p><span class="mark"></span></article></label>
+<label class="book"><input data-book="borges-tlon" type="checkbox"/><article class="paper"><div class="num">05</div><div class="author">Хорхе Луис Борхес</div><div class="title">Тлён, Укбар, Орбис Терциус</div><p class="desc">В одной из энциклопедий обнаруживается статья о загадочной стране Укбар, которой, похоже, никогда не существовало. Дальнейшие поиски приводят к описанию целой вымышленной планеты Тлён, обладающей собственной историей, языками и философией. Постепенно следы этого мира начинают проникать в реальность, заставляя усомниться в том, что вообще можно считать существующим.</p><span class="mark"></span></article></label>
 </div><div class="counter">выбрано: <span>0</span></div></section>
-
-<section class="submitbox"><div><h3>Выбор сделан?</h3><p>Голос попадёт в общий результат клуба. Выбор можно изменить позже — новый вариант заменит предыдущий.</p><div class="done">Голос сохранён.</div><div data-who></div></div><button id="save" disabled>Сохранить мой выбор</button></section>
+<section class="submitbox"><div><h3>Выбор сделан?</h3><p>Голос попадёт в общий результат клуба. Выбор можно изменить позже — новый вариант заменит предыдущий.</p><div class="done">Голос сохранён.</div><div data-who=""></div></div><button disabled="" id="save">Сохранить мой выбор</button></section>
 <footer>Рисанкин Книжный Клуб · голосование</footer>
-
-<div id="identity-modal" class="identity-modal" onclick="if(event.target===this)closeIdentity()">
- <div class="identity-card">
-  <button class="identity-close" onclick="closeIdentity()" aria-label="Закрыть">×</button>
-  <div class="identity-kicker">один раз на этом устройстве</div>
-  <h2>Как тебя зовут?</h2>
-  <p>Имя нужно, чтобы твой ответ можно было изменить, а не записывать заново.</p>
-  <label>Имя<input id="first-name" autocomplete="given-name"></label>
-  <label>Фамилия<input id="last-name" autocomplete="family-name"></label>
-  <div id="identity-error"></div>
-  <button class="identity-save" onclick="saveIdentity()">Продолжить</button>
- </div>
+<div class="identity-modal" id="identity-modal" onclick="if(event.target===this)closeIdentity()">
+<div class="identity-card">
+<button aria-label="Закрыть" class="identity-close" onclick="closeIdentity()">×</button>
+<div class="identity-kicker">один раз на этом устройстве</div>
+<h2>Как тебя зовут?</h2>
+<p>Имя нужно, чтобы твой ответ можно было изменить, а не записывать заново.</p>
+<label>Имя<input autocomplete="given-name" id="first-name"/></label>
+<label>Фамилия<input autocomplete="family-name" id="last-name"/></label>
+<div id="identity-error"></div>
+<button class="identity-save" onclick="saveIdentity()">Продолжить</button>
 </div>
-
+</div>
 </div>
 <script>
 const SB_URL='https://ucdbshgntaqtojsuzvqb.supabase.co';
@@ -131,6 +131,11 @@ function refreshWho(){
 }
 
 const VOTING_ID="next-meeting-2026-11";
+// End of 22 November 2026 in Moscow (UTC+03:00), inclusive.
+const VOTING_DEADLINE=Date.parse('2026-11-22T23:59:59+03:00');
+function isVotingClosed(){return Date.now()>VOTING_DEADLINE;}
+function applyVotingDeadline(){if(!isVotingClosed())return;boxes.forEach(b=>b.disabled=true);btn.disabled=true;btn.textContent='Голосование завершено';const note=document.createElement('p');note.className='vote-closed-note';note.textContent='Приём голосов завершён 22 ноября. Спасибо всем, кто участвовал!';document.querySelector('.hero').append(note);}
+
 // Names are stored separately. Public visitors have INSERT permission only;
 // only the Supabase project owner can view the private table in Table Editor.
 async function registerParticipantName(pid){
@@ -148,7 +153,7 @@ const boxes=[...document.querySelectorAll('input[type=checkbox]')];
 const btn=document.querySelector('#save'), done=document.querySelector('.done');
 function update(){
  document.querySelectorAll('.form').forEach(g=>g.querySelector('.counter span').textContent=g.querySelectorAll('input:checked').length);
- btn.disabled=!boxes.some(x=>x.checked); done.style.display='none';
+ btn.disabled=isVotingClosed()||!boxes.some(x=>x.checked); done.style.display='none';
 }
 boxes.forEach(b=>b.addEventListener('change',update));
 
@@ -163,6 +168,7 @@ async function loadMyVotes(){
  }catch(e){update();}
 }
 async function saveVotes(){
+ if(isVotingClosed()){applyVotingDeadline();return;}
  if(!participantName()){openIdentity(saveVotes);return;}
  const pid=await participantId(participantName());
  btn.disabled=true; btn.textContent="Сохраняю…";
@@ -186,5 +192,5 @@ async function saveVotes(){
  btn.textContent="Сохранить мой выбор"; update(); done.style.display="block";
 }
 btn.addEventListener('click',saveVotes);
-document.addEventListener("DOMContentLoaded",loadMyVotes);
+document.addEventListener("DOMContentLoaded",()=>{loadMyVotes();applyVotingDeadline();});
 </script></body></html>
