@@ -15,11 +15,48 @@ footer{border-top:1px solid var(--ink);display:flex;justify-content:space-betwee
 .reader-reviews{max-width:960px;margin:36px auto;padding:24px;background:#f8f0df;color:#26211b;border:1px solid #c3b59c}.reader-reviews h2{font:27px Georgia,serif;margin:0 0 12px}.reader-review{border-top:1px solid #c3b59c;padding:15px 0}.reader-review p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;margin:8px 0 0}.reader-review small{opacity:.65}.reviews-list{line-height:1.6}
 .book-action-panel{max-width:960px;margin:35px auto;padding:26px;background:#f4ead8;color:#30271f;border:1px solid #b8a68d;font:15px/1.5 Georgia,serif}.book-action-panel h2{font:normal 30px Georgia,serif;margin:0 0 9px}.book-action-panel p{margin:6px 0 14px}.book-action-panel label{display:block;margin:14px 0 6px}.book-action-panel select,.book-action-panel textarea{width:100%;padding:10px;background:#fffaf1;color:#30271f;border:1px solid #a99982;font:inherit}.book-action-panel textarea{min-height:115px;resize:vertical}.book-action-panel button{padding:10px 17px;margin-top:13px;border:0;background:var(--accent);color:white;font:inherit;cursor:pointer}.book-action-panel button:disabled{opacity:.5}.book-action-panel .book-action-note{font:13px Arial,sans-serif}.book-action-panel [hidden]{display:none!important}
 @media(max-width:770px){.wrap{padding:17px 16px 0}.hero{grid-template-columns:1fr;gap:35px;padding:46px 0 55px}h1{font-size:clamp(54px,13.5vw,96px)}.rating{font-size:75px}.art-outer{max-width:320px}.art-label{left:-8px;bottom:-14px;font-size:19px}.review-head{display:block}.review-head span{display:block;margin-top:14px}.review{grid-template-columns:1fr;gap:20px}.review p,.quotation{grid-column:1}.review p{font-size:17px}.quotation{font-size:22px}footer{font-size:9px}}
+
+/* Minimal individual visual identity */
+.visual-wrap{width:100%;max-width:385px;margin:0 auto}
+.visual-mark{position:relative;width:100%;height:390px;overflow:hidden;border:1px solid var(--ink)}
+.star-mark{background:#d8e3dd;color:#27454a}
+.star-year{position:absolute;top:24px;left:27px;font:11px Arial,sans-serif;letter-spacing:.2em}
+.star-glyph{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font:138px/1 Georgia,serif;color:#b74839}
+.star-horizon{position:absolute;left:0;right:0;bottom:92px;height:1px;background:#27454a}
+.star-horizon:after{content:"";position:absolute;right:16%;top:-4px;width:9px;height:9px;border-radius:50%;background:#b74839}
+.star-note{position:absolute;left:27px;bottom:25px;font:10px Arial,sans-serif;letter-spacing:.2em}
+.visual-caption{margin:16px 0 0;text-align:center;font:italic 20px/1.3 Georgia,serif;color:#5f6259}
+.review p:first-child{grid-column:1/-1;max-width:850px;font-size:21px;line-height:1.55}
+.review-opening{display:inline-block;margin-right:5px;color:var(--accent);font:italic 27px/1.15 Georgia,serif}
+.quotation{box-shadow:none;transform:none;border:0;border-left:3px solid var(--accent);background:transparent;padding:7px 0 7px 24px}
+@media(max-width:770px){.visual-mark{height:300px;max-width:330px}.star-glyph{font-size:112px}.star-horizon{bottom:72px}.visual-caption{font-size:18px}.review p:first-child{font-size:18px}.review-opening{font-size:23px}}
+
+
+.review{display:flex;flex-direction:column;gap:22px;max-width:850px}
+.review p{font:19px/1.68 Georgia,serif;margin:0}
+.review .review-lead{font:italic 30px/1.25 Georgia,serif;color:var(--accent);margin-bottom:2px}
+@media(max-width:770px){.review{gap:17px}.review p{font-size:17px}.review .review-lead{font-size:25px}}
+
 </style></head><body><div class="wrap">
 <nav><b>РКК · EX LIBRIS</b><a href="archive.html">← вернуться к прочитанному</a></nav>
 <main><section class="hero"><div><div class="issue">Выпуск № 10 · прочитано в клубе</div><h1>Звёздный билет</h1><div class="by">Василий Аксёнов</div><div class="rating">9,6 <small>/ 10</small></div></div>
-<div class="art-outer"><img src="star-ticket.jpg" alt="Иллюстрация к произведению Звёздный билет"><div class="art-label">Юность, свобода и внезапная глубина</div></div></section>
-<div class="rule"></div><section><div class="review-head"><h2>Подглядывая за жизнью</h2><span>Рецензия книжного клуба</span></div><div class="review"><p>Как же это было хорошо! Аксёнов написал книгу так, будто мы просто подглядываем за жизнью людей. Она читается очень легко, интересно и даже просто — но иногда автор совершенно неожиданно и коротко уходит в глубину.</p><p>Именно эти переходы особенно запоминаются: только что перед тобой почти повседневная сцена, а в следующую секунду — мысль, после которой хочется остановиться. Трудно даже вспомнить, на что похоже это ощущение.</p><p>Книга кажется удивительно эмоционально безопасной, хотя за внешней лёгкостью в ней чувствуется что-то гораздо более серьёзное. Аксёнов не заставляет нас смотреть на героев сверху: мы оказываемся рядом и наблюдаем, как они пытаются понять собственную жизнь.</p><p>Эта естественность, живость и внезапная глубина сделали «Звёздный билет» одним из самых любимых наших чтений.</p><div class="quotation">Как же это было хорошо!</div></div></section></main>
+<div class="visual-wrap">
+<div class="visual-mark star-mark" role="img" aria-label="Минималистичный знак: звезда, горизонт и отметка 1961 года">
+  <span class="star-year">1961</span>
+  <span class="star-glyph">✳</span>
+  <span class="star-horizon"></span>
+  <span class="star-note">ЛЕТО · ДОРОГА</span>
+</div>
+<div class="visual-caption">Юность, свобода и внезапная глубина</div>
+</div></section>
+<div class="rule"></div><section><div class="review-head"><h2>Как же это было хорошо!</h2><span>Рецензия книжного клуба</span></div><div class="review">
+  <p>Начнём с самого текста. Аксёнов написал книгу так, будто мы просто подглядываем за чужими жизнями. Читается она легко, интересно и даже просто, но время от времени автор совершенно неожиданно и буквально на пару строк уходит в глубину. И трудно даже вспомнить, на что это похоже.</p>
+  <p>Удивительно, насколько эмоционально безопасной кажется эта книга, хотя события ближе к финалу заставляют в этом усомниться. Автор использует множество литературных приёмов, и каждый оказывается на своём месте.</p>
+  <p>Отдельно обсуждали тему свободы, которую Аксёнов неожиданно раскрывает с самых разных сторон. Такие темы всегда хочется примерять на современную действительность. У кого-то получилось провести параллели, у кого-то — нет.</p>
+  <p>Некоторым участникам события показались слишком стремительными, особенно в том, что касается отношений героев: «Они очень по-взрослому как-то смотрят на любовь». Но, как ни странно, саму любовь мы почти не обсуждали.</p>
+  <p>Конечно, нашлись и моменты, которые мы так и не смогли до конца понять.</p>
+  <p>А под конец пришли к неожиданному выводу: это произведение будто создано для сцены. Причём не просто для театра, а именно для мюзикла!</p>
+</div></div></section></main>
 <footer><span>Рисанкин Книжный Клуб</span><span>Архив прочитанного · 2026</span></footer></div>
 <section id="readerReviews" class="reader-reviews" data-book-id="star-ticket"><h2>Рецензии читателей</h2><p>Оставить свою рецензию можно ниже, в читательской записи.</p><div class="reviews-list">Загружаем рецензии…</div></section>
 <section class="book-action-panel" id="bookActionPanel" data-book-id="star-ticket" data-book-aliases="star-ticket,book-275acca99856">
