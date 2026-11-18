@@ -41,9 +41,33 @@ footer{border-top:1px solid var(--ink);display:flex;justify-content:space-betwee
 .review .review-ending{font:italic 23px/1.45 Georgia,serif;color:var(--accent);padding-top:4px}
 @media(max-width:770px){.review{gap:17px}.review p{font-size:17px}.review .review-lead{font-size:20px}.opposing-quotes{grid-template-columns:1fr;gap:14px}.opposing-quotes blockquote{font-size:18px}.review .review-ending{font-size:20px}}
 
+
+/* Final layout correction: complete title lines and balanced editorial hero */
+.hero{grid-template-columns:minmax(0,1.16fr) minmax(270px,.84fr);gap:clamp(28px,4vw,52px);align-items:center}
+.hero>div:first-child{min-width:0}
+h1.book-title{display:flex;flex-direction:column;align-items:flex-start;gap:0;font:400 clamp(54px,5.6vw,84px)/.94 'Arial Narrow',Impact,Arial,sans-serif;letter-spacing:-.065em;overflow:visible;margin:27px 0 19px;max-width:100%}
+h1.book-title span{display:block;white-space:nowrap;max-width:100%}
+.visual-wrap{width:100%;max-width:350px;margin:0 auto}
+.visual-mark{position:relative;width:min(100%,330px);height:385px;overflow:hidden;border:1px solid var(--ink)}
+.ryb-mark{background:#345b67;color:#f0cf87}
+.ryb-index{position:absolute;top:25px;left:25px;font:10px Arial,sans-serif;letter-spacing:.2em;color:#f1e7d5}
+.ryb-initial{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);font:155px/.9 Georgia,serif;color:#f0cf87}
+.ryb-rule{position:absolute;left:25px;right:25px;bottom:76px;height:1px;background:rgba(241,231,213,.68)}
+.ryb-case{position:absolute;left:25px;bottom:25px;font:10px Arial,sans-serif;letter-spacing:.2em;color:#f1e7d5}
+.ryb-dot{position:absolute;right:25px;bottom:22px;width:9px;height:9px;border-radius:50%;background:#b74839}
+.visual-caption{margin:14px 0 0;text-align:center;font:italic 18px/1.3 Georgia,serif;color:#5f6259}
+.review{display:flex;flex-direction:column;gap:21px;max-width:850px}
+.review p{font:19px/1.68 Georgia,serif;margin:0}
+.review .review-lead{font:italic 22px/1.45 Georgia,serif;color:var(--accent)}
+.opposing-quotes{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:0 0 2px}
+.opposing-quotes blockquote{margin:0;padding:4px 0 4px 18px;border-left:2px solid var(--accent);font:italic 20px/1.45 Georgia,serif}
+.review .review-ending{font:italic 23px/1.45 Georgia,serif;color:var(--accent);padding-top:4px}
+@media(max-width:770px){.hero{grid-template-columns:1fr;gap:30px;padding:46px 0 55px}h1.book-title{font-size:clamp(43px,10vw,66px);line-height:.96}h1.book-title span{white-space:nowrap}.visual-mark{height:345px;max-width:300px}.ryb-initial{font-size:138px}.ryb-rule{bottom:66px}.review{gap:17px}.review p{font-size:17px}.review .review-lead{font-size:20px}.opposing-quotes{grid-template-columns:1fr;gap:14px}.opposing-quotes blockquote{font-size:18px}.review .review-ending{font-size:20px}}
+@media(max-width:390px){h1.book-title{font-size:clamp(38px,9.3vw,48px)}}
+
 </style></head><body><div class="wrap">
 <nav><b>РКК · EX LIBRIS</b><a href="archive.html">← вернуться к прочитанному</a></nav>
-<main><section class="hero"><div><div class="issue">Выпуск № 10 · прочитано в клубе</div><h1>Штабс-капитан Рыбников</h1><div class="by">Александр Куприн</div><div class="rating">5,3 <small>/ 10</small></div></div>
+<main><section class="hero"><div><div class="issue">Выпуск № 10 · прочитано в клубе</div><h1 class="book-title"><span>Штабс-капитан</span><span>Рыбников</span></h1><div class="by">Александр Куприн</div><div class="rating">5,3 <small>/ 10</small></div></div>
 <div class="visual-wrap">
 <div class="visual-mark ryb-mark" role="img" aria-label="Минималистичный знак секретного дела 1904 года">
   <span class="ryb-index">АРХИВ · 1904</span>
@@ -54,7 +78,9 @@ footer{border-top:1px solid var(--ink);display:flex;justify-content:space-betwee
 </div>
 <div class="visual-caption">Война, маски и двойное дно</div>
 </div></section>
-<div class="rule"></div><section><div class="review-head"><h2>Две стороны впечатления</h2><span>Рецензия книжного клуба</span></div><div class="review">
+<div class="rule"></div><section>
+<div class="review-head"><h2>Две стороны впечатления</h2><span>Рецензия книжного клуба</span></div>
+<div class="review">
   <p class="review-lead">Кажется, лучше всего наше впечатление от произведения описывают две совершенно противоположные цитаты участников:</p>
   <div class="opposing-quotes">
     <blockquote>«Проститутка и журналист раскрыли международного шпиона».</blockquote>
@@ -65,8 +91,7 @@ footer{border-top:1px solid var(--ink);display:flex;justify-content:space-betwee
   <p>Но нельзя не признать, насколько хорошо Куприн поработал над текстом. Образы продуманы до мелочей, персонажи прописаны очень подробно, и за этим действительно интересно наблюдать. Это однозначный плюс.</p>
   <p>А вот оценку произведению неожиданно подняла концовка. Всё разрешилось настолько абсурдно, что именно это в итоге и спасло общее впечатление.</p>
   <p class="review-ending">Хотя, возможно, мы снова просто не разглядели второе дно?</p>
-</div>
-<p class="review-opening-line">И обе по-своему подходят.</p><p>Начало не особенно увлекает. Описание войны воспринимается как школьная литература: читается скорее по обязанности, чем из настоящего интереса.</p><p>Но у Куприна есть несомненное достоинство: образы проработаны очень подробно. Автор продумал характеры, детали и атмосферу эпохи — это нельзя не признать.</p><p>А потом всё заканчивается настолько абсурдно, что впечатление неожиданно меняется. Именно развязка заметно повлияла на нашу оценку. Хотя вопрос остаётся открытым: может быть, мы опять просто не поняли второе дно?</p><div class="quotation">А может, мы опять просто не поняли второе дно?</div></div></section></main>
+</div></section></main>
 <footer><span>Рисанкин Книжный Клуб</span><span>Архив прочитанного · 2026</span></footer></div>
 <section id="readerReviews" class="reader-reviews" data-book-id="captain-rybnikov"><h2>Рецензии читателей</h2><p>Оставить свою рецензию можно ниже, в читательской записи.</p><div class="reviews-list">Загружаем рецензии…</div></section>
 <section class="book-action-panel" id="bookActionPanel" data-book-id="captain-rybnikov" data-book-aliases="captain-rybnikov,book-0c3e5bf169f2">
