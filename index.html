@@ -591,7 +591,7 @@ display:grid;grid-template-columns:.75fr 1fr;gap:40px;box-shadow:10px 12px 0 #00
   transform:rotate(3deg); opacity:.9;
 }
 .vote-live:after{
-  content:"✦"; position:absolute; right:22px; bottom:55px;
+  content:""; position:absolute; right:22px; bottom:55px; width:44px; height:44px; background:currentColor; clip-path:polygon(50% 0,57% 38%,100% 50%,57% 62%,50% 100%,43% 62%,0 50%,43% 38%);
   font:46px/1 Georgia,serif; transform:rotate(12deg);
 }
 .vote-live-head{position:relative;z-index:1;align-items:flex-start;margin-bottom:30px}
@@ -690,7 +690,7 @@ display:grid;grid-template-columns:.75fr 1fr;gap:40px;box-shadow:10px 12px 0 #00
 #now .paper-note:after{content:"06 / 11";display:block;margin-top:15px;font:700 11px Arial,sans-serif;letter-spacing:.2em}
 #now .tape-a{width:110px;height:27px;background:rgba(83,102,89,.35);left:-31px;top:2px}
 #now .paperclip{font-size:0}
-#now .paperclip:after{content:"✦";font-size:46px;color:#a93e31}
+#now .paperclip:after{content:"";display:inline-block;width:36px;height:36px;background:#a93e31;clip-path:polygon(50% 0,57% 38%,100% 50%,57% 62%,50% 100%,43% 62%,0 50%,43% 38%)}
 #now .doodle-red{right:-50%;top:63%;font-size:44px}
 #now .doodle-black{left:-78px;bottom:5%;font-size:0}
 #now .doodle-black:after{content:"★  ★";font-size:24px;letter-spacing:10px;color:#244f69}
@@ -903,15 +903,26 @@ display:grid;grid-template-columns:.75fr 1fr;gap:40px;box-shadow:10px 12px 0 #00
  .pb10 .title{font-size:10px!important}
 }
 
+
+/* Icons are SVG illustrations, not emoji characters; robust on iOS Safari. */
+.announcement-star{display:flex;align-items:center;justify-content:center;color:#a33e32;line-height:1}
+.announcement-star svg{display:block;width:60px;height:60px;flex:none}
+.announcement-button{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.announcement-arrow{display:block;width:16px;height:16px;flex:none}
+.hero .scribble svg{display:inline-block;vertical-align:-.24em;margin-right:5px}
+@media(max-width:700px){
+  .announcement-star svg{width:42px;height:42px}
+  .announcement-button{display:flex;justify-content:center}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav><b>РКК</b><div class="links"><a href="#read">Мы прочитали</a><a href="voting.html">Голосование</a><a href="stats.html">Статистика</a></div><a href="what-to-read.html">Что почитать?</a> <a href="library.html">Библиотека клуба</a> <a href="previously.html">Ранее в клубе</a> <a href="account.html">Личный кабинет</a></nav>
-<aside aria-label="Открыто голосование до 22 ноября" class="voting-announcement"><div aria-hidden="true" class="announcement-star">✳</div><div class="announcement-copy"><div class="announcement-label">Выпуск № 11 · Книжный клуб выбирает</div><div class="announcement-title">Голосование открыто <em>до 22 ноября</em></div><p>Выбираем следующие произведения крупной и малой формы. Успей оставить свой голос до конца 22 ноября.</p></div><a class="announcement-button" href="voting.html">Перейти к голосованию ↗</a></aside>
+<aside aria-label="Открыто голосование до 22 ноября" class="voting-announcement"><div aria-hidden="true" class="announcement-star"><svg viewBox="0 0 72 72" width="60" height="60" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 7V65M7 36H65M15.5 15.5L56.5 56.5M56.5 15.5L15.5 56.5" stroke="currentColor" stroke-width="5" stroke-linecap="square"/><circle cx="36" cy="36" r="4" fill="currentColor"/></svg></div><div class="announcement-copy"><div class="announcement-label">Выпуск № 11 · Книжный клуб выбирает</div><div class="announcement-title">Голосование открыто <em>до 22 ноября</em></div><p>Выбираем следующие произведения крупной и малой формы. Успей оставить свой голос до конца 22 ноября.</p></div><a class="announcement-button" href="voting.html">Перейти к голосованию <svg class="announcement-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 19L19 5M8 5h11v11" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/></svg></a></aside>
 <header class="hero">
 <h1>Рисанкин<br/>Книжный Клуб</h1>
-<div class="scribble">✶ книжный архив</div>
+<div class="scribble"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2v28M2 16h28M6 6l20 20M26 6L6 26" stroke="currentColor" stroke-width="1.6"/></svg> книжный архив</div>
 </header>
 
 
